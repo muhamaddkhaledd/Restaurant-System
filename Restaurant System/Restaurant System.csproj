@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D382E36F-6DCE-4FF0-B6B4-DB39E55B17B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Restaurant_System</RootNamespace>
+    <AssemblyName>Restaurant System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkout.Designer.cs">
+      <DependentUpon>checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datas.cs" />
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="show bill details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show bill details.Designer.cs">
+      <DependentUpon>show bill details.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="checkout.resx">
+      <DependentUpon>checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="show bill details.resx">
+      <DependentUpon>show bill details.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-barbecue-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-barbecue-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-chicken-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-coffee-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-croissant-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-fish-food-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-herring-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-lobster-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-malai-kofta-58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-oyster-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-prawn-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-salad-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-salmon-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-soft-drink-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-solo-cup-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-soup-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-tea-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-orange-juice-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-mango-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="products_images\icons8-soup-plate-96.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
